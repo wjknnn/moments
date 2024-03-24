@@ -2,6 +2,7 @@
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import SideNav from "../components/SideNav.astro";
+import Chip from "../components/Chip.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 ---
 
@@ -14,9 +15,13 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
     <SideNav />
     <main class="w-full">
       <Header />
-      <div class="flex to-point-950 from-black bg-gradient-to-t h-[360px] flex-col justify-end p-24"><h1 class="m-0 font-thin">My Blog</h1></div>
-      <section id="section">
-      </section>
+      <div
+        class="flex to-point-950 from-black bg-gradient-to-t h-[360px] flex-col justify-end p-24 gap-[12px]"
+      >
+        <Chip theme="gray">Test Chip</Chip>
+        <h1 class="m-0 font-thin">My Blog</h1>
+      </div>
+      <section id="section"></section>
     </main>
   </body>
 </html>
