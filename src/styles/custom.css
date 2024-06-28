@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.page {
+  @apply bg-white dark:bg-black;
+}
+
+.page header {
+  @apply bg-white bg-opacity-60 dark:bg-black dark:bg-opacity-60 backdrop-blur-md;
+}
+
+.page > .header {
+  @apply h-24;
+}
+
+.site-title {
+  @apply text-black dark:text-white font-semibold tracking-tighter;
+}
+
+.social-icons {
+  @apply [&>a]:text-black dark:[&>a]:text-white;
+}
+
+.main-frame,
+.right-sidebar {
+  @apply pt-24;
+}
+
+.sidebar-pane {
+  inset-block-start: 96px;
+  @apply bg-white dark:bg-black;
+}
+
+.sidebar-content {
+  @apply p-[16px_16px_0_24px];
+}
+
+summary {
+  @apply py-3 px-0;
+}
+
+summary > div > .large {
+  @apply text-[16px] font-medium text-gray-700 dark:text-white;
+}
+
+.sidebar-content .top-level > li > details > ul > li > details > summary {
+  @apply py-2;
+}
+
+li > details > ul > li > details > summary > .group-label > span {
+  @apply font-normal text-gray-500 dark:text-gray-300 text-[14px];
+}
+
+li > details > ul > li > details > summary > svg {
+  @apply text-gray-400;
+}
+
+details > ul {
+  @apply pl-[14px];
+}
+
+details > ul > li > details > ul {
+  @apply pl-0;
+}
+
+details > ul > li {
+  @apply m-0 p-0 border-0;
+}
+
+details > ul > li > a > span {
+  @apply text-black dark:text-white;
+}
+
+details > ul > li > details > ul > li {
+  @apply border-l-[1px] border-gray-200 dark:border-gray-800;
+}
+
+li > details > ul > li > a {
+  @apply rounded-lg p-[10px_8px_10px_12px] !text-black transition-colors;
+}
+
+li > details > ul > li > a[aria-current='page'] {
+  @apply rounded-[0_8px_8px_0] !bg-gray-200 dark:!bg-gray-800 p-[10px_8px_10px_12px] !text-black dark:!text-white border-l-2 border-accent-600 font-medium;
+}
+
+li > details > ul > li > a:hover {
+  @apply !font-medium !bg-gray-200 dark:!bg-gray-800;
+}
+
+.main-pane {
+  @apply flex justify-center flex-1;
+}
+
+.main-pane main {
+  @apply max-w-[768px] w-full;
+}
+
+.main-pane main .content-panel {
+  @apply p-6 border-0;
+}
+
+.right-sidebar-container {
+  @apply w-[300px];
+}
+
+.right-sidebar {
+  @apply border-0;
+}
+
+#starlight__on-this-page {
+  @apply text-[16px] font-medium text-gray-700 dark:text-white mb-6;
+}
+
+.sl-container starlight-toc nav ul {
+  @apply flex flex-col gap-2;
+}
+
+.sl-container starlight-toc nav ul li a {
+  @apply p-[4px_8px_4px_0] font-normal;
+}
+
+.sl-container starlight-toc nav ul li a:hover {
+  @apply text-accent-600;
+}
+
+.sl-container starlight-toc nav ul li a[aria-current='true'] {
+  @apply font-medium text-accent-600 dark:brightness-200;
+}
+
+footer .pagination-links a {
+  @apply transition-colors shadow-none bg-gray-50 dark:bg-gray-950 border-gray-200 dark:border-gray-800 hover:bg-gray-100 dark:hover:bg-gray-900 hover:border-gray-300 dark:hover:border-gray-700;
+}

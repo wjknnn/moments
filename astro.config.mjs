@@ -1,16 +1,44 @@
-import { defineConfig } from "astro/config";
-import mdx from "@astrojs/mdx";
-import react from "@astrojs/react";
-import tailwind from "@astrojs/tailwind";
-import sitemap from "@astrojs/sitemap";
+import { defineConfig } from 'astro/config';
+import starlight from '@astrojs/starlight';
+import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://example.com",
   integrations: [
-    tailwind({ applyBaseStyles: false, nesting: true }),
-    react(),
-    mdx(),
-    sitemap(),
+    starlight({
+      title: 'Moments',
+      social: {
+        github: 'https://github.com/wjknnn',
+      },
+      sidebar: [
+        {
+          label: 'Guides',
+          items: [
+            // Each item here is one entry in the navigation menu.
+            {
+              label: 'Example Guide',
+              items: [
+                {
+                  label: 'Example Guide',
+                  link: '/guides/example/',
+                },
+              ],
+            },
+          ],
+        },
+        {
+          label: 'Reference',
+          autogenerate: {
+            directory: 'reference',
+          },
+        },
+      ],
+      customCss: [
+        './src/tailwind.css',
+        './src/styles/custom.css',
+        './src/styles/customMD.css',
+      ],
+    }),
+    tailwind({ applyBaseStyles: false }),
   ],
 });
