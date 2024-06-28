@@ -12,25 +12,46 @@ export default defineConfig({
       },
       sidebar: [
         {
-          label: 'Guides',
+          label: 'Blog',
           items: [
-            // Each item here is one entry in the navigation menu.
             {
-              label: 'Example Guide',
-              items: [
-                {
-                  label: 'Example Guide',
-                  link: '/guides/example/',
-                },
-              ],
+              label: '블로그 소개',
+              link: '/blog',
+              attrs: { style: 'display: none' },
             },
+            { label: '일상적인', autogenerate: { directory: 'blog/daily' } },
+            { label: '기술적인', autogenerate: { directory: 'blog/tech' } },
           ],
         },
         {
-          label: 'Reference',
-          autogenerate: {
-            directory: 'reference',
-          },
+          label: 'TIL',
+          items: [
+            {
+              label: 'TIL 소개',
+              link: '/til',
+              attrs: { style: 'display: none' },
+            },
+            {
+              label: 'Javascript',
+              autogenerate: { directory: 'til/javascript' },
+            },
+            {
+              label: 'Typescript',
+              autogenerate: { directory: 'til/typescript' },
+            },
+            {
+              label: 'React.js',
+              autogenerate: { directory: 'til/reactjs' },
+            },
+            {
+              label: 'Next.js',
+              autogenerate: { directory: 'til/nextjs' },
+            },
+            {
+              label: 'Supabase',
+              autogenerate: { directory: 'til/supabase' },
+            },
+          ],
         },
       ],
       customCss: [

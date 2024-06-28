@@ -9,3 +9,23 @@ h1 {
 h2 {
   @apply !text-[24px] !font-medium;
 }
+
+.starlight-aside {
+  @apply border-0 rounded-lg p-6 flex flex-col gap-1;
+}
+
+.starlight-aside__icon {
+  @apply w-4 h-4;
+}
+
+.starlight-aside__title {
+  @apply font-medium;
+}
+
+.expressive-code .frame figcaption {
+  @apply !rounded-[8px_8px_0_0];
+}
+
+.expressive-code .frame pre {
+  @apply !rounded-[0_0_8px_8px];
+}
