@@ -133,5 +133,5 @@ footer .pagination-links a {
 }
 
 .sl-link-card {
-  @apply shadow-none p-6 rounded-2xl border-gray-200 dark:border-gray-800 hover:border-gray-300;
+  @apply !shadow-none !p-6 !rounded-2xl !border-gray-200 dark:!border-gray-800 hover:!border-gray-300;
 }
