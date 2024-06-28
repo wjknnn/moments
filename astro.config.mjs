@@ -2,6 +2,8 @@ import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import tailwind from '@astrojs/tailwind';
 
+import sitemap from '@astrojs/sitemap';
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://moments-omega.vercel.app',
@@ -18,10 +20,22 @@ export default defineConfig({
             {
               label: '블로그 소개',
               link: '/blog',
-              attrs: { style: 'display: none' },
+              attrs: {
+                style: 'display: none',
+              },
             },
-            { label: '일상적인', autogenerate: { directory: 'blog/daily' } },
-            { label: '기술적인', autogenerate: { directory: 'blog/tech' } },
+            {
+              label: '일상적인',
+              autogenerate: {
+                directory: 'blog/daily',
+              },
+            },
+            {
+              label: '기술적인',
+              autogenerate: {
+                directory: 'blog/tech',
+              },
+            },
           ],
         },
         {
@@ -30,27 +44,39 @@ export default defineConfig({
             {
               label: 'TIL 소개',
               link: '/til',
-              attrs: { style: 'display: none' },
+              attrs: {
+                style: 'display: none',
+              },
             },
             {
               label: 'Javascript',
-              autogenerate: { directory: 'til/javascript' },
+              autogenerate: {
+                directory: 'til/javascript',
+              },
             },
             {
               label: 'Typescript',
-              autogenerate: { directory: 'til/typescript' },
+              autogenerate: {
+                directory: 'til/typescript',
+              },
             },
             {
               label: 'React.js',
-              autogenerate: { directory: 'til/reactjs' },
+              autogenerate: {
+                directory: 'til/reactjs',
+              },
             },
             {
               label: 'Next.js',
-              autogenerate: { directory: 'til/nextjs' },
+              autogenerate: {
+                directory: 'til/nextjs',
+              },
             },
             {
               label: 'Supabase',
-              autogenerate: { directory: 'til/supabase' },
+              autogenerate: {
+                directory: 'til/supabase',
+              },
             },
           ],
         },
@@ -61,6 +87,9 @@ export default defineConfig({
         './src/styles/customMD.css',
       ],
     }),
-    tailwind({ applyBaseStyles: false }),
+    tailwind({
+      applyBaseStyles: false,
+    }),
+    sitemap(),
   ],
 });
