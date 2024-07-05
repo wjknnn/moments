@@ -2,6 +2,7 @@
 title: TIL 소개
 description: TIL 소개
 author: Seungwoo Choi
+prev: false
 head:
   - tag: meta
     attrs: { property: 'keywords', content: '개발, TIL' }

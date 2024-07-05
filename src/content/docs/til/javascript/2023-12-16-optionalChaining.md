@@ -1,6 +1,7 @@
 ---
 title: 'Optional chaining'
 author: Seungwoo Choi
+lastUpdated: 2023-12-16
 head:
   - tag: meta
     attrs:

@@ -12,6 +12,8 @@ export default defineConfig({
       title: 'Moments',
       social: {
         github: 'https://github.com/wjknnn',
+        linkedin:
+          'https://www.linkedin.com/in/%EC%8A%B9%EC%9A%B0-%EC%B5%9C-a33a662a3',
       },
       sidebar: [
         {
