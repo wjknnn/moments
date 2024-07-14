@@ -159,3 +159,7 @@ mobile-starlight-toc nav {
 .primary {
   @apply !bg-accent-600 !text-white;
 }
+
+.sl-badge {
+  @apply !text-[12px] !font-semibold dark:!text-[#89b0ff] !text-accent-600 dark:border-accent-900 border-accent-200 dark:bg-accent-950 bg-[#dfe2ff] rounded-md;
+}

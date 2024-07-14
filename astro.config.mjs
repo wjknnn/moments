@@ -79,6 +79,7 @@ export default defineConfig({
               autogenerate: {
                 directory: 'til/supabase',
               },
+              badge: 'New',
             },
           ],
         },
