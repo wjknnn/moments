@@ -88,6 +88,9 @@ export default defineConfig({
         './src/styles/custom.css',
         './src/styles/customMD.css',
       ],
+      components: {
+        PageTitle: './src/components/PageTitle.astro',
+      },
     }),
     tailwind({
       applyBaseStyles: false,

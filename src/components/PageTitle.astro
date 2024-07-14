@@ -1,0 +1,53 @@
+---
+import type { Props } from '@astrojs/starlight/props';
+import Default from '@astrojs/starlight/components/PageTitle.astro';
+
+const { lastUpdated, id, slug } = Astro.props;
+
+const date = new Date(lastUpdated as Date).toLocaleString('ko-kr', {
+  year: 'numeric',
+  month: '2-digit',
+  day: '2-digit',
+});
+
+const currentPath = Astro.url.pathname;
+const path = currentPath.split('/').slice(1, -2);
+if (!path.length) path.push(slug);
+
+const splitedId = id.split('-');
+const imagePath = `/images/${path[0]}/${path.length > 1 ? splitedId[3] : slug}.webp`;
+---
+
+<div
+  class="flex items-center gap-2 text-gray-500 dark:text-gray-400 text-[16px] px-1"
+>
+  {
+    path.map((value, index) => (
+      <>
+        <p>{value}</p>
+        {index + 1 !== path.length && <p class="text-[14px]">/</p>}
+      </>
+    ))
+  }
+</div>
+<Default {...Astro.props}><slot /></Default>
+<div class="flex items-center gap-4">
+  <img
+    src="/images/profile.png"
+    alt=""
+    class="size-10 dark:bg-gray-900 rounded-full border dark:border-gray-800"
+  />
+  <div class="flex flex-col gap-0">
+    <p class="dark:text-white">Seungwoo Choi</p>
+    <p class="text-[14px] -mt-1">{date}</p>
+  </div>
+</div>
+{
+  (splitedId.length < 2 || +splitedId[4][0] !== 0) && (
+    <img
+      src={imagePath}
+      alt="Cover image"
+      class="w-full rounded-lg border dark:border-gray-800"
+    />
+  )
+}
