@@ -1,101 +1,107 @@
-import { defineConfig } from 'astro/config';
-import starlight from '@astrojs/starlight';
-import tailwind from '@astrojs/tailwind';
+import { defineConfig } from "astro/config"
+import starlight from "@astrojs/starlight"
+import tailwind from "@astrojs/tailwind"
 
-import sitemap from '@astrojs/sitemap';
+import sitemap from "@astrojs/sitemap"
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://moments-omega.vercel.app',
+  site: "https://blog.seungwoo.me",
+  markdown: {
+    syntaxHighlight: "shiki",
+    shikiConfig: {
+      theme: "github-dark-default"
+    }
+  },
   integrations: [
     starlight({
-      title: 'Moments',
+      title: "Moments",
       social: {
-        github: 'https://github.com/wjknnn',
+        github: "https://github.com/wjknnn",
         linkedin:
-          'https://www.linkedin.com/in/%EC%8A%B9%EC%9A%B0-%EC%B5%9C-a33a662a3',
+          "https://www.linkedin.com/in/%EC%8A%B9%EC%9A%B0-%EC%B5%9C-a33a662a3"
       },
       sidebar: [
         {
-          label: 'Blog',
+          label: "Blog",
           items: [
             {
-              label: '블로그 소개',
-              link: '/blog',
+              label: "블로그 소개",
+              link: "/blog",
               attrs: {
-                style: 'display: none',
-              },
+                style: "display: none"
+              }
             },
             {
-              label: '일상적인',
+              label: "일상적인",
               autogenerate: {
-                directory: 'blog/daily',
-              },
+                directory: "blog/daily"
+              }
             },
             {
-              label: '기술적인',
+              label: "기술적인",
               autogenerate: {
-                directory: 'blog/tech',
-              },
-            },
-          ],
+                directory: "blog/tech"
+              }
+            }
+          ]
         },
         {
-          label: 'TIL',
+          label: "TIL",
           items: [
             {
-              label: 'TIL 소개',
-              link: '/til',
+              label: "TIL 소개",
+              link: "/til",
               attrs: {
-                style: 'display: none',
-              },
+                style: "display: none"
+              }
             },
             {
-              label: 'Javascript',
+              label: "Javascript",
               autogenerate: {
-                directory: 'til/javascript',
-              },
+                directory: "til/javascript"
+              }
             },
             {
-              label: 'Typescript',
+              label: "Typescript",
               autogenerate: {
-                directory: 'til/typescript',
-              },
+                directory: "til/typescript"
+              }
             },
             {
-              label: 'React.js',
+              label: "React.js",
               autogenerate: {
-                directory: 'til/reactjs',
-              },
+                directory: "til/reactjs"
+              }
             },
             {
-              label: 'Next.js',
+              label: "Next.js",
               autogenerate: {
-                directory: 'til/nextjs',
-              },
+                directory: "til/nextjs"
+              }
             },
             {
-              label: 'Supabase',
+              label: "Supabase",
               autogenerate: {
-                directory: 'til/supabase',
+                directory: "til/supabase"
               },
-              badge: 'New',
-            },
-          ],
-        },
+              badge: "New"
+            }
+          ]
+        }
       ],
       customCss: [
-        './src/tailwind.css',
-        './src/styles/custom.css',
-        './src/styles/customMD.css',
+        "./src/tailwind.css",
+        "./src/styles/custom.css",
+        "./src/styles/customMD.css"
       ],
       components: {
-        PageTitle: './src/components/PageTitle.astro',
-      },
+        PageTitle: "./src/components/PageTitle.astro"
+      }
     }),
     tailwind({
-      applyBaseStyles: false,
+      applyBaseStyles: false
     }),
-    sitemap(),
-  ],
-});
+    sitemap()
+  ]
+})
