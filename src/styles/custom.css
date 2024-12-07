@@ -80,7 +80,7 @@ li > details > ul > li > a {
   @apply rounded-lg p-[10px_8px_10px_12px] !text-black transition-colors;
 }
 
-li > details > ul > li > a[aria-current='page'] {
+li > details > ul > li > a[aria-current="page"] {
   @apply rounded-[0_8px_8px_0] !bg-gray-200 dark:!bg-gray-800 p-[10px_8px_10px_12px] !text-black dark:!text-white border-l-2 border-accent-600 font-medium;
 }
 
@@ -124,7 +124,7 @@ li > details > ul > li > a:hover {
   @apply text-accent-600;
 }
 
-.sl-container starlight-toc nav ul li a[aria-current='true'] {
+.sl-container starlight-toc nav ul li a[aria-current="true"] {
   @apply font-medium text-accent-600 dark:brightness-200;
 }
 
@@ -136,15 +136,15 @@ footer .pagination-links a {
   @apply transition-colors !shadow-none !p-6 !rounded-2xl !border-gray-200 dark:!border-gray-800 hover:!border-gray-300;
 }
 
-button[aria-label='Menu'] {
+button[aria-label="Menu"] {
   @apply shadow-none top-[30px] size-9 p-2 bg-white dark:bg-black;
 }
 
-starlight-menu-button[aria-expanded='true'] {
+starlight-menu-button[aria-expanded="true"] {
   @apply [&>button]:!bg-gray-200 dark:[&>button]:!bg-gray-800;
 }
 
-button[aria-label='Menu'] svg {
+button[aria-label="Menu"] svg {
   @apply w-full h-full text-black dark:text-white;
 }
 
