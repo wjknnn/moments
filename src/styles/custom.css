@@ -157,7 +157,7 @@ mobile-starlight-toc nav {
 }
 
 .primary {
-  @apply !bg-accent-600 !text-white;
+  @apply !bg-accent-600 hover:!bg-accent-600/80 !text-white border-none transition-colors;
 }
 
 .sl-badge {
